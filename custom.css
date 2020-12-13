@@ -19,7 +19,7 @@ body {
 
 /* Define the Jumbtron's background image*/
 .jumbotron-bg-image {
-  background-image: url("assets/mountain-top.png");
+  background-image: url("assets/interferometer-pattern.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
