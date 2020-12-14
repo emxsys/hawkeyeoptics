@@ -64,43 +64,8 @@
       }
 
       // Loads the JavaScript client library and invokes `start` afterwards.
-      gapi.load('client', start);
+      gapi.load('client:auth2', start);
     </script>
-
-    <!-- Google Visualization API -->
-<!--
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-       google.load('visualization', '1', {packages: ['corechart']});
-    </script>
-    <script type="text/javascript">
-      function drawDynamicSelect(){
-        var query = new google.visualization.Query(
-          "https://docs.google.com/spreadsheets/d/1w94FHLW02JQ5Tpd5RXoX24_MVeKzJ1BZ6uFjHvVXD18/edit?usp=sharing",
-          'xhr'); // send the query using XmlHttpRequest
-        //var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1w94FHLW02JQ5Tpd5RXoX24_MVeKzJ1BZ6uFjHvVXD18/tq?sheet=Interferometers%27")
-        query.setQuery('select A, B, C, D order by A');
-
-        var user = gapi.auth2.getAuthInstance().currentUser.get();
-        var oauthToken = user.getAuthResponse().access_token;
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET',
-          'https://people.googleapis.com/v1/people/me/connections');
-        xhr.setRequestHeader('Authorization', 'Bearer ' + oauthToken);
-        xhr.send();
-
-        //query.send(handleQueryResponse);
-      }
-      function handleQueryResponse(response) {
-        var html;
-        var data = response.getDataTable();
-        for (row=0; row < data.getNumberOfRows(); row++) {
-          html += "<h3>" + data.getValue(row, 0) + "</h3>";
-        }
-        $('#inventory').append(html);
-      }
-    </script>
--->
   </head>
 
   <body <!--onload="drawDynamicSelect();"--> >
