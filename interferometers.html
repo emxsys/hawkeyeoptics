@@ -23,8 +23,7 @@
     API Key: AIzaSyA_NUaXwMrTOZHW-_asCJTDSVb0jTrXeSI
     -->
     <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
-    <script type="text/javascript">
-
+    <script>
       function start() {
         // Initializes the client with the API key and the Translate API.
         gapi.client.init({
@@ -64,11 +63,11 @@
       }
 
       // Loads the JavaScript client library and invokes `start` afterwards.
-      gapi.load('client:auth2', start);
+      gapi.load('client', start);
     </script>
   </head>
 
-  <body <!--onload="drawDynamicSelect();"--> >
+  <body>
     <!-- The navbar menu type and colors -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <!-- The menu's "branding", i.e., icon and title -->
